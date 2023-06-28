@@ -13,7 +13,7 @@ const navLinks: NavLinkProps[] = [
   { label: 'Past Projects', href: '/404' },
   { label: 'Functionalities', href: '/404' },
   { label: 'Inventionionals', href: '/404' },
-  { label: 'Case Studies', href: '/404  ' },
+  { label: 'Case Studies', href: '/404' },
 ];
 
 export default function Header() {
@@ -29,25 +29,26 @@ export default function Header() {
       />
 
       <nav className="hidden lg:block">
-        <ul className="flex items-start justify-start gap-8">
+        <ul className="flex items-center justify-start gap-8">
           {navLinks.map(({ href, label }) => (
-            <Link
-              id={label}
-              key={href}
-              href={href}
-              className={clsx(
-                'text-sm text-[#6B7280] hover:text-opacity-80',
-                currentNav.href === href && 'font-medium'
-              )}>
-              {label}
-            </Link>
+            <li key={href}>
+              <Link
+                id={label}
+                href={href}
+                className={clsx(
+                  'text-sm text-gray-800 hover:text-opacity-80',
+                  currentNav.href === href && 'font-medium'
+                )}>
+                {label}
+              </Link>
+            </li>
           ))}
         </ul>
       </nav>
 
       <button
         type="button"
-        className="flex items-center justify-center rounded-lg bg-blue-500 px-3 py-2">
+        className="flex items-center justify-center rounded-lg bg-blue-600 px-3 py-2 hover:bg-blue-700">
         <span className="text-sm font-medium uppercase text-white">Contact Us</span>
       </button>
     </header>

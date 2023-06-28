@@ -20,8 +20,8 @@ export default function About() {
 
         <button
           type="button"
-          className="max-w-none rounded-md bg-blue-500 px-4 py-2 transition duration-300 ease-in-out hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white lg:max-w-fit">
-          <span className="text-center text-sm font-medium text-white">More Details</span>
+          className="max-w-none rounded-md bg-blue-600 px-4 py-2 transition duration-300 ease-in-out hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white">
+          <span className="text-sm font-medium text-white">More Details</span>
         </button>
       </div>
 
