@@ -4,6 +4,7 @@ import Integration from '@/assets/svgs/services/integration.svg';
 import Language from '@/assets/svgs/services/language.svg';
 import Networking from '@/assets/svgs/services/networking.svg';
 import Solidarity from '@/assets/svgs/services/solidarity.svg';
+import { LayoutProps } from '@/typings/components';
 
 interface ServiceCardProps {
   title: string;
@@ -51,9 +52,11 @@ const SERVICE_CARDS: ServiceCardProps[] = [
   },
 ];
 
-export default function Services() {
+export default function Services(props: LayoutProps) {
   return (
-    <div className="flex flex-col items-center justify-center gap-16 px-4 py-24 text-center lg:px-24">
+    <div
+      {...props}
+      className="flex flex-col items-center justify-center gap-16 bg-white px-4 py-24 text-center lg:px-24">
       <div className="flex flex-col gap-4">
         <h1 className="select-none text-3xl font-extrabold text-[#20252A] lg:text-4xl">
           Our

@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
-import Logo from '@/assets/svgs/logo.svg';
 import clsx from 'clsx';
+
+import Logo from '@/assets/svgs/logo.svg';
 
 type NavLinkProps = {
   href: string;
@@ -9,15 +10,14 @@ type NavLinkProps = {
 };
 
 const navLinks: NavLinkProps[] = [
-  { label: 'Our Services', href: '/' },
-  { label: 'Past Projects', href: '/404' },
-  { label: 'Functionalities', href: '/404' },
-  { label: 'Inventionionals', href: '/404' },
-  { label: 'Case Studies', href: '/404' },
+  { label: 'About', href: '#about' },
+  { label: 'Services', href: '#services' },
+  { label: 'Case Studies', href: '#case-studies' },
+  { label: 'Functionalities', href: '#functionalities' },
+  { label: 'Inventionionals', href: '#inventionionals' },
 ];
 
 export default function Header() {
-  // TODO: Add current nav link (while scrolling, etc.)
   const currentNav = navLinks[0];
 
   return (

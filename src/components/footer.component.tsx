@@ -32,9 +32,11 @@ const FOOTER_SECTIONS: FooterSection[] = [
   },
 ];
 
-export default function Footer() {
+export default function Footer(props: { id: string }) {
   return (
-    <footer className="flex animate-gradient-xy flex-col items-start justify-between gap-8 bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-12 lg:flex-row lg:items-center lg:px-24 lg:py-24">
+    <footer
+      id={props.id}
+      className="flex animate-gradient-xy flex-col items-start justify-between gap-8 bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-12 lg:flex-row lg:items-center lg:px-24 lg:py-24">
       <div>
         <h1 className="text-2xl font-bold text-[#F4F3FF] md:max-w-md">
           You like our work?! <br />

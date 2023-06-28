@@ -1,8 +1,11 @@
 import Robot from '@/assets/svgs/robot.svg';
+import { LayoutProps } from '@/typings/components';
 
-export default function About() {
+export default function About(props: LayoutProps) {
   return (
-    <div className="flex flex-col-reverse justify-between gap-8 p-4 py-12 lg:flex lg:flex-row lg:px-16">
+    <div
+      {...props}
+      className="flex flex-col-reverse justify-between gap-8 bg-white p-4 py-12 lg:flex lg:flex-row lg:px-16">
       <div className="flex flex-col items-center justify-center gap-4 lg:items-start">
         <h1 className="text-2xl font-semibold text-[#20252A] lg:text-4xl">ABOUT US</h1>
 
@@ -10,9 +13,7 @@ export default function About() {
           At Inventional, we know that AI can be daunting. That&apos;s why we&apos;re dedicated to
           making our solutions clear and concise, eliminating the tech jargon so you can focus on
           what truly matters — successfully implementing AI strategies to maximize business
-          potential.
-          <br />
-          <br />
+          potential. <br /> <br />
           With over 7 years of experience in conversational and AI technology, and more than 100
           successful projects under our belt, our team is well-equipped to guide your organization
           through the complexities of AI, streamlining the process for impactful results.
