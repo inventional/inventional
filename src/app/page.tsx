@@ -8,6 +8,7 @@ import Integration from '@/assets/svgs/services/integration.svg';
 import Language from '@/assets/svgs/services/language.svg';
 import Networking from '@/assets/svgs/services/networking.svg';
 import Solidarity from '@/assets/svgs/services/solidarity.svg';
+import Footer from '@/components/footer.component';
 import Header from '@/components/header.component';
 import Trademark from '@/components/trademark.component';
 
@@ -18,6 +19,7 @@ export default function Home() {
       <AboutUs />
       <TextCard />
       <Services />
+      <Footer />
     </main>
   );
 }
