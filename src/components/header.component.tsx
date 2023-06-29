@@ -46,11 +46,11 @@ export default function Header() {
         </ul>
       </nav>
 
-      <button
-        type="button"
-        className="flex items-center justify-center rounded-lg bg-blue-600 px-3 py-2 hover:bg-blue-700">
-        <span className="text-sm font-medium uppercase text-white">Contact Us</span>
-      </button>
+      <Link
+        href="#contact"
+        className="flex items-center justify-center rounded-lg bg-blue-600 px-3 py-2 text-sm font-medium uppercase text-white hover:bg-blue-700">
+        Contact Us
+      </Link>
     </header>
   );
 }

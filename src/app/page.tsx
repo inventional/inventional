@@ -1,6 +1,6 @@
 import Footer from '@/components/footer.component';
 import About from '@/components/layouts/about.layout';
-import Contact from '@/components/layouts/contact.component';
+import Contact from '@/components/layouts/contact.layout';
 import Landing from '@/components/layouts/landing.layout';
 import Services from '@/components/layouts/services.layout';
 
