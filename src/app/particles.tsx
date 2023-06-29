@@ -3,13 +3,20 @@
 import { useCallback } from 'react';
 import { Particles as ReactParticles } from 'react-particles';
 
-import { loadFull } from 'tsparticles';
-import configs from 'tsparticles-demo-configs';
-import { Engine } from 'tsparticles-engine';
+import { loadSlim } from 'tsparticles-slim';
+import { loadDestroyUpdater } from 'tsparticles-updater-destroy';
+import { loadRollUpdater } from 'tsparticles-updater-roll';
+import { loadTiltUpdater } from 'tsparticles-updater-tilt';
+import { loadTwinkleUpdater } from 'tsparticles-updater-twinkle';
+import type { Engine } from 'tsparticles-engine';
 
 export default function Particles(props: { id: string; className?: string }) {
   const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(engine);
+    await loadSlim(engine);
+    await loadRollUpdater(engine);
+    await loadTiltUpdater(engine);
+    await loadTwinkleUpdater(engine);
+    await loadDestroyUpdater(engine);
   }, []);
 
   return (
@@ -20,7 +27,7 @@ export default function Particles(props: { id: string; className?: string }) {
         name: 'Link Triangles',
         particles: {
           number: {
-            value: 80,
+            value: 50,
             density: {
               enable: true,
             },
@@ -29,7 +36,7 @@ export default function Particles(props: { id: string; className?: string }) {
             value: '#ffffff',
             animation: {
               enable: true,
-              speed: 20,
+              speed: 10,
               sync: true,
             },
           },
@@ -65,11 +72,11 @@ export default function Particles(props: { id: string; className?: string }) {
         interactivity: {
           events: {
             onHover: {
-              enable: true,
+              enable: false,
               mode: 'repulse',
             },
             onClick: {
-              enable: true,
+              enable: false,
               mode: 'push',
             },
           },
