@@ -2,8 +2,7 @@ import './globals.css';
 
 import { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
-
-import Header from '@/components/header.component';
+import Script from 'next/script';
 
 const rubik = Rubik({
   variable: '--font-rubik',
@@ -29,6 +28,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="image/<generated>"
           sizes="<generated>"
         />
+
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
+        />
+
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'GA_MEASUREMENT_ID');
+          `}
+        </Script>
       </head>
 
       <body className={rubik.className}>{children}</body>
